@@ -1,4 +1,4 @@
-# **P4 - APP NAME**
+# **P4 - TBD but nicknamed Will Friend in my head currently**
 ## Developer: Arielle Gironza
 
 [**Link to GitHub**](https://github.com/akgironza/P4-Backend)
