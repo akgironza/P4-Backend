@@ -60,4 +60,4 @@ HTML, CSS, SASS, Python, JavaScript, PostgreSQL, Django, ReactJS, Neon, Express.
 
 
 ### Entity-Relationship Diagram
-![Picture of ERD](P4_ERD.png)
+![Picture of ERD](willapp/P4_ERD.png)
