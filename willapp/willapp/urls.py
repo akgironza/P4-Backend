@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from wills.views import WillViewSet, AssetViewSet, InheritorViewSet, InheritorGroupViewSet, DistributionViewSet
+from wills.views import WillViewSet, AssetViewSet #, InheritorViewSet, InheritorGroupViewSet, DistributionViewSet
 
 
 # New router
@@ -25,9 +25,9 @@ router = routers.DefaultRouter()
 # Register viewsets
 router.register(r'will', WillViewSet)
 router.register(r'asset', AssetViewSet)
-router.register(r'inheritor', InheritorViewSet)
-router.register(r'inheritor-group', InheritorGroupViewSet)
-router.register(r'distribution', DistributionViewSet)
+#router.register(r'inheritor', InheritorViewSet)
+#router.register(r'inheritor-group', InheritorGroupViewSet)
+#router.register(r'distribution', DistributionViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
