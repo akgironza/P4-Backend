@@ -7,6 +7,6 @@ set -o errexit
 pip install -r dependencies.txt
 
 # run migrations
-python manage.pym migrate
+python manage.py migrate
 
 chmod a+x setup.sh
