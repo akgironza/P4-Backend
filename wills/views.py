@@ -11,7 +11,7 @@ class WillViewSet(viewsets.ModelViewSet):
     # Serializer class for serializing output
     serializer_class = WillSerializer
     # Set permission level, optional
-    permission_classes  = [permissions.AllowAny]
+    permission_classes = [permissions.AllowAny]
 
 class AssetViewSet(viewsets.ModelViewSet):
     # Main query for index route
@@ -19,7 +19,7 @@ class AssetViewSet(viewsets.ModelViewSet):
     # Serializer class for serializing output
     serializer_class = AssetSerializer
     # Set permission level, optional
-    permission_classes  = [permissions.AllowAny]
+    permission_classes = [permissions.AllowAny]
 
 # class InheritorViewSet(viewsets.ModelViewSet):
 #     # Main query for index route

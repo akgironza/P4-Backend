@@ -19,6 +19,8 @@ from django.urls import path, include
 from rest_framework import routers
 from wills.views import WillViewSet, AssetViewSet #, InheritorViewSet, InheritorGroupViewSet, DistributionViewSet
 
+# Eventually want to try nesting the routers I think, but also want to implement auth eventually too
+
 
 # New router
 router = routers.DefaultRouter()
