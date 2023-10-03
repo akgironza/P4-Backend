@@ -1,4 +1,5 @@
 from django.db import models
+from rest_framework import serializers
 
 # Create your models here.
 
@@ -10,7 +11,8 @@ class Will(models.Model):
     created_when = models.DateTimeField()
 
 class Asset(models.Model):
-    will = models.ForeignKey(Will, on_delete=models.CASCADE)
+    will = models.ForeignKey(Will, on_delete=models.CASCADE, related_name="asset")
+    # will = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
     quantity = models.IntegerField()
