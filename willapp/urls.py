@@ -33,5 +33,7 @@ router.register(r'asset', AssetViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    # path('will/', include('will.urls')),
+    # path('asset/', include('asset.urls')),
     path('admin/', admin.site.urls),
 ]

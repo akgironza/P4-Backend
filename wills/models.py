@@ -10,7 +10,7 @@ class Will(models.Model):
     created_when = models.DateTimeField()
 
 class Asset(models.Model):
-    will_id = models.ForeignKey("Will", on_delete=models.DO_NOTHING)
+    will = models.ForeignKey(Will, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
     quantity = models.IntegerField()
@@ -24,13 +24,13 @@ class Inheritor(models.Model):
     active = models.BooleanField()
 
 class InheritorGroup(models.Model):
-    inheritor_id = models.ForeignKey("Inheritor", on_delete=models.DO_NOTHING)
+    inheritor = models.ForeignKey(Inheritor, on_delete=models.DO_NOTHING)
     grouping_key = models.IntegerField()
     priority = models.IntegerField()
 
 class Distribution(models.Model):
-    asset_id = models.ForeignKey("Asset", on_delete=models.DO_NOTHING)
-    inheritor_group_id = models.ForeignKey("InheritorGroup", on_delete=models.DO_NOTHING)
+    asset = models.ForeignKey(Asset, on_delete=models.CASCADE)
+    inheritor_group = models.ForeignKey(InheritorGroup, on_delete=models.CASCADE)
     percentage = models.FloatField()
     distributed = models.BooleanField()
 
